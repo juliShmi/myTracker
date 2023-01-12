@@ -1,1 +1,33 @@
-<p>want-to-read-books works!</p>
+<div class="main-container">
+  <div class="row">
+    <div class="grid-3-cols">
+      <div *ngFor="let book of books">
+        <div class="container">
+          <h4 class="list-group-item-heading">{{ book.author }}</h4>
+          <h4 class="list-group-item-heading">{{ book.title }}</h4>
+          <img
+            [src]="book.image"
+            alt="{{ book.title }}"
+            class="img-responsive"
+            style="max-height: 200px"
+          />
+          <div class="pull-right">
+            <button class="btn btn-primary">Start reading</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <button class="btn btn-success" type="submit" (click)="onAddNewBook()">
+    Add new book
+  </button>
+  <div class="col-sm-5 form-group">
+    <label for="author">Author</label>
+    <input type="text" id="author" class="form-control" #newAuthor />
+  </div>
+  <div class="col-sm-5 form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" class="form-control" #newTitle />
+  </div>
+</div>
