@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 import { Book } from "../book.model";
+import { BooksService } from "../books.service";
 
 @Component({
   selector: "app-want-to-read-books",
@@ -11,10 +12,11 @@ export class WantToReadBooksComponent {
   @ViewChild("newTitle") newTitleInputRef: ElementRef;
   @Input() book: Book;
 
-  books: Book[] = [
-    new Book("Харуки Мураками", "О чем я говорю, когда говорю о беге"),
-    new Book("Эдгар По", "Золотой жук"),
-  ];
+  books: Book[];
+
+  constructor(private booksService: BooksService) {
+    this.books = booksService.getBooks();
+  }
 
   onAddNewBook() {
     const authorAdded = this.newAuthorInputRef.nativeElement.value;

@@ -6,6 +6,6 @@ export class Book {
   constructor(author: string, title: string) {
     this.author = author;
     this.title = title;
-    this.image = "https://pngimg.com/uploads/book/book_PNG51092.png";
+    this.image = "https://pngimg.com/uploads/book/book_PNG51092.png"
   }
 }
