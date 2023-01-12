@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from "@angular/core";
+import { Component, ElementRef, Input, ViewChild } from "@angular/core";
 import { Book } from "../book.model";
 
 @Component({
@@ -9,6 +9,7 @@ import { Book } from "../book.model";
 export class WantToReadBooksComponent {
   @ViewChild("newAuthor") newAuthorInputRef: ElementRef;
   @ViewChild("newTitle") newTitleInputRef: ElementRef;
+  @Input() book: Book;
 
   books: Book[] = [
     new Book("Харуки Мураками", "О чем я говорю, когда говорю о беге"),
