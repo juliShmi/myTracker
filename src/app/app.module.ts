@@ -9,6 +9,7 @@ import { HeadersComponent } from './headers/headers.component';
 import { WantToReadBooksComponent } from './my-books/want-to-read-books/want-to-read-books.component';
 import { InProgressBooksComponent } from './my-books/in-progress-books/in-progress-books.component';
 import { FinishedBooksComponent } from './my-books/finished-books/finished-books.component';
+import { BookHeadersComponent } from './my-books/book-headers/book-headers.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FinishedBooksComponent } from './my-books/finished-books/finished-books
     HeadersComponent,
     WantToReadBooksComponent,
     InProgressBooksComponent,
-    FinishedBooksComponent
+    FinishedBooksComponent,
+    BookHeadersComponent
   ],
   imports: [
     BrowserModule,
