@@ -1,1 +1,26 @@
-<p>in-progress-books works!</p>
+<div class="main-container">
+  <div class="row">
+    <div class="grid-3-cols">
+      <div *ngFor="let book of booksInProgress">
+        <div class="container">
+          <h4 class="list-group-item-heading">{{ book.author }}</h4>
+          <h4 class="list-group-item-heading">{{ book.title }}</h4>
+          <img
+            [src]="book.image"
+            alt="{{ book.title }}"
+            class="img-responsive"
+            style="max-height: 200px"
+          />
+          <div class="pull-right">
+            <button class="btn btn-success" style="margin-right: 5px">
+              Finish
+            </button>
+            <button class="btn btn-primary" style="margin-right: 5px">
+              Return to Wishlist
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

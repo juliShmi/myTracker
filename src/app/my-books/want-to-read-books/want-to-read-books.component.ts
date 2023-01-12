@@ -24,4 +24,9 @@ export class WantToReadBooksComponent {
     const newBook = new Book(authorAdded, titleAdded);
     this.books.push(newBook);
   }
+
+  // onDeleteBook() {
+  //   const index = this.books.indexOf(this.book);
+  //   this.booksService.deleteBook(index);
+  // }
 }

@@ -11,4 +11,8 @@ export class BooksService {
   getBooks() {
     return this.books.slice();
   }
+
+  deleteBook(index: number) {
+    this.books.splice(index, 1);
+  }
 }
