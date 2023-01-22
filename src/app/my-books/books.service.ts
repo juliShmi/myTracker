@@ -1,18 +1,17 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Input } from "@angular/core";
 import { Book } from "./book.model";
 
 @Injectable()
 export class BooksService {
-  private books: Book[] = [
-    new Book("Харуки Мураками", "О чем я говорю, когда говорю о беге"),
-    new Book("Эдгар По", "Золотой жук"),
-  ];
+  private books: Book[] = [];
 
   getBooks() {
-    return this.books.slice();
+    return this.books;
   }
 
-  deleteBook(index: number) {
-    this.books.splice(index, 1);
+  addToInProgress(book: Book) {
+    book.status = "inProgress";
+    console.log(book);
+    this.books.push(book);
   }
 }

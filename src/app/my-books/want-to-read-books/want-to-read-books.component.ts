@@ -1,6 +1,8 @@
 import { Component, ElementRef, Input, ViewChild } from "@angular/core";
+import { BookStatus } from "../book-status";
 import { Book } from "../book.model";
 import { BooksService } from "../books.service";
+import { InProgressBooksComponent } from "../in-progress-books/in-progress-books.component";
 
 @Component({
   selector: "app-want-to-read-books",
@@ -10,12 +12,13 @@ import { BooksService } from "../books.service";
 export class WantToReadBooksComponent {
   @ViewChild("newAuthor") newAuthorInputRef: ElementRef;
   @ViewChild("newTitle") newTitleInputRef: ElementRef;
-  @Input() book: Book;
 
   books: Book[];
 
   constructor(private booksService: BooksService) {
-    this.books = booksService.getBooks();
+    this.books = booksService
+      .getBooks()
+      .filter((Book) => Book.status === BookStatus.wantToRead);
   }
 
   onAddNewBook() {
@@ -23,6 +26,10 @@ export class WantToReadBooksComponent {
     const titleAdded = this.newTitleInputRef.nativeElement.value;
     const newBook = new Book(authorAdded, titleAdded);
     this.books.push(newBook);
+  }
+
+  onAddToInProgress(book: Book) {
+    this.booksService.addToInProgress(book);
   }
 
   // onDeleteBook() {
