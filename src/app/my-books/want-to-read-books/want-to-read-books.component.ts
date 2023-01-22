@@ -32,8 +32,7 @@ export class WantToReadBooksComponent {
     this.booksService.addToInProgress(book);
   }
 
-  // onDeleteBook() {
-  //   const index = this.books.indexOf(this.book);
-  //   this.booksService.deleteBook(index);
-  // }
+  onDelete(book: Book) {
+    this.booksService.delete(book);
+  }
 }
