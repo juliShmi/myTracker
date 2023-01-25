@@ -4,6 +4,7 @@ import { Book } from "./book.model";
 
 @Injectable()
 export class BooksService {
+  //private books: Book[] = [new Book("Haruki Murakami", "Norwegian Wood")];
   private books: Book[] = [];
 
   getBooks() {

@@ -27,12 +27,4 @@ export class WantToReadBooksComponent {
     const newBook = new Book(authorAdded, titleAdded);
     this.books.push(newBook);
   }
-
-  onAddToInProgress(book: Book) {
-    this.booksService.addToInProgress(book);
-  }
-
-  onDelete(book: Book) {
-    this.booksService.delete(book);
-  }
 }
