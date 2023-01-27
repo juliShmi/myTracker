@@ -11,8 +11,9 @@ import { InProgressBooksComponent } from "./my-books/in-progress-books/in-progre
 import { FinishedBooksComponent } from "./my-books/finished-books/finished-books.component";
 import { BookHeadersComponent } from "./my-books/book-headers/book-headers.component";
 import { BooksService } from "./my-books/books.service";
-import { BookItemComponent } from './my-books/book-item/book-item.component';
-import { BookItemButtonsComponent } from './my-books/book-item/book-item-buttons/book-item-buttons.component';
+import { BookItemComponent } from "./my-books/book-item/book-item.component";
+import { BookItemButtonsComponent } from "./my-books/book-item/book-item-buttons/book-item-buttons.component";
+import { Dropdown } from "./my-books/dropdown";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BookItemButtonsComponent } from './my-books/book-item/book-item-buttons
     BookHeadersComponent,
     BookItemComponent,
     BookItemButtonsComponent,
+    Dropdown,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [BooksService],
