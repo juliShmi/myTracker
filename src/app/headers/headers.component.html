@@ -10,9 +10,17 @@
         ></a>
         <ul class="dropdown-menu">
           <li><a style="cursor: pointer">Show all books</a></li>
-          <li><a style="cursor: pointer">Want To Read</a></li>
-          <li><a style="cursor: pointer">In Progress</a></li>
-          <li><a style="cursor: pointer">Finished</a></li>
+          <li>
+            <a routerLink="/want-to-read" style="cursor: pointer"
+              >Want To Read</a
+            >
+          </li>
+          <li>
+            <a routerLink="/in-progress" style="cursor: pointer">In Progress</a>
+          </li>
+          <li>
+            <a routerLink="/finished" style="cursor: pointer">Finished</a>
+          </li>
         </ul>
       </li>
       <li routerLinkActive="active"><a routerLink="/todo">My To Do</a></li>

@@ -7,11 +7,12 @@ import { WantToReadBooksComponent } from "./my-books/want-to-read-books/want-to-
 import { MyToDoComponent } from "./my-to-do/my-to-do.component";
 
 const routes: Routes = [
+  { path: "", redirectTo: "/to-do", pathMatch: "full" },
   { path: "books", component: MyBooksComponent },
-  { path: "todo", component: MyToDoComponent },
-  { path: "books/in-progress", component: InProgressBooksComponent },
-  { path: "books/want-to-read", component: WantToReadBooksComponent },
-  { path: "books/finished-books", component: FinishedBooksComponent },
+  { path: "want-to-read", component: WantToReadBooksComponent },
+  { path: "in-progress", component: InProgressBooksComponent },
+  { path: "finished", component: FinishedBooksComponent },
+  { path: "to-do", component: MyToDoComponent },
 ];
 
 @NgModule({

@@ -9,7 +9,6 @@ import { HeadersComponent } from "./headers/headers.component";
 import { WantToReadBooksComponent } from "./my-books/want-to-read-books/want-to-read-books.component";
 import { InProgressBooksComponent } from "./my-books/in-progress-books/in-progress-books.component";
 import { FinishedBooksComponent } from "./my-books/finished-books/finished-books.component";
-import { BookHeadersComponent } from "./my-books/book-headers/book-headers.component";
 import { BooksService } from "./my-books/books.service";
 import { BookItemComponent } from "./my-books/book-item/book-item.component";
 import { BookItemButtonsComponent } from "./my-books/book-item/book-item-buttons/book-item-buttons.component";
@@ -24,7 +23,6 @@ import { Dropdown } from "./my-books/dropdown";
     WantToReadBooksComponent,
     InProgressBooksComponent,
     FinishedBooksComponent,
-    BookHeadersComponent,
     BookItemComponent,
     BookItemButtonsComponent,
     Dropdown,
